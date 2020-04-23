@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ProductListService} from '../../../default/services/product-list.service';
+import {ProductListService} from '../../../services/product-list.service';
 import {Product} from '../../modals/product';
 import {NzNotificationService} from 'ng-zorro-antd';
-import {Constant} from '../../../default/utils/constant';
+import {Constant} from '../../../utils/constant';
 
 @Component({
   selector: 'app-product-details',

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from '../../../../customers/modals/product';
+import {ProductListService} from '../../../../services/product-list.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +11,7 @@ export class ProductListComponent implements OnInit {
   listOfData: Product[] = [];
   isLoading = false;
 
-  constructor() {
+  constructor(private productListService: ProductListService) {
   }
 
   ngOnInit(): void {
@@ -18,8 +19,13 @@ export class ProductListComponent implements OnInit {
     setTimeout(() => {
       this.isLoading = false;
       this.listOfData = JSON.parse(localStorage.getItem('product-list'));
+      this.productListService.getProductList().then((result: Product) => {
+        this.isLoading = false;
+        this.listOfData.push(result);
+      }).catch(error => {
+        this.isLoading = false;
+      });
     }, 2000);
-
   }
 
   deleteProduct(data, index) {

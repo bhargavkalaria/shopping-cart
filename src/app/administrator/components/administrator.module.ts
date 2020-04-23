@@ -16,13 +16,13 @@ import {AdministratorRouting} from './administrator-routing';
     ProductListComponent,
     ProductComponent
   ],
-    imports: [
-        CommonModule,
-        NgZorroAntdModule,
-        ReactiveFormsModule,
-        AdministratorRouting,
-        FormsModule
-    ]
+  imports: [
+    CommonModule,
+    NgZorroAntdModule,
+    ReactiveFormsModule,
+    AdministratorRouting,
+    FormsModule
+  ]
 })
 export class AdministratorModule {
 }

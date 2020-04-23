@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductListService} from '../../../default/services/product-list.service';
+import {ProductListService} from '../../../services/product-list.service';
 import {Product} from '../../modals/product';
 import {NzNotificationService} from 'ng-zorro-antd';
 import {Router} from '@angular/router';

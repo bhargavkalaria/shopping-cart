@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {NzNotificationService} from 'ng-zorro-antd';
-import {Constant} from '../../../../default/utils/constant';
+import {Constant} from '../../../../utils/constant';
 import {Router} from '@angular/router';
 
 @Component({

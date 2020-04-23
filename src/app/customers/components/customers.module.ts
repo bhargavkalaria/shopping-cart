@@ -8,10 +8,10 @@ import {ProductListComponent} from './product-list/product-list.component';
 import {ProductDetailsComponent} from './product-details/product-details.component';
 import {CartComponent} from './cart/cart.component';
 import {OrderStatusComponent} from './order-status/order-status.component';
-import {ProductListService} from '../../default/services/product-list.service';
+import {ProductListService} from '../../services/product-list.service';
 import {BrowserModule} from '@angular/platform-browser';
-import { AuthGuard } from 'src/app/default/guards/auth.guard';
-import { AuthLoadChildGuard } from 'src/app/default/guards/auth-load-child.guard';
+import { AuthGuard } from 'src/app/guards/auth.guard';
+import { AuthLoadChildGuard } from 'src/app/guards/auth-load-child.guard';
 
 
 @NgModule({
