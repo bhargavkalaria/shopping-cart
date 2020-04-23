@@ -9,9 +9,6 @@ import {ProductDetailsComponent} from './product-details/product-details.compone
 import {CartComponent} from './cart/cart.component';
 import {OrderStatusComponent} from './order-status/order-status.component';
 import {ProductListService} from '../../services/product-list.service';
-import {BrowserModule} from '@angular/platform-browser';
-import { AuthGuard } from 'src/app/guards/auth.guard';
-import { AuthLoadChildGuard } from 'src/app/guards/auth-load-child.guard';
 
 
 @NgModule({
@@ -30,7 +27,6 @@ import { AuthLoadChildGuard } from 'src/app/guards/auth-load-child.guard';
   ],
   providers: [
     ProductListService,
-    AuthLoadChildGuard
   ]
 })
 export class CustomersModule {

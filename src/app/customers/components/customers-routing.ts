@@ -5,9 +5,6 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { OrderStatusComponent } from './order-status/order-status.component';
-import { AuthGuard } from 'src/app/guards/auth.guard';
-import { AuthLoadChildGuard } from 'src/app/guards/auth-load-child.guard';
-import { AuthActivateChildGuard } from 'src/app/guards/auth-activate-child.guard';
 
 const CustomersRoutes: Routes = [
   {

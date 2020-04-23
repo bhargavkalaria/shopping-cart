@@ -1,4 +1,4 @@
-<ng-container  *ngIf="!isLoading">
+<ng-container *ngIf="!isLoading">
   <nz-table #basicTable [nzData]="listOfData">
     <thead>
     <tr>
@@ -7,7 +7,8 @@
       <th>Image</th>
       <th>Rating</th>
       <th>Discount</th>
-      <th>Action</th>
+      <th class="cursor-pointer">Edit</th>
+      <th>Delete</th>
     </tr>
     </thead>
     <tbody>
@@ -17,6 +18,7 @@
       <td><img src="{{data.productImage}}" class="table-image"></td>
       <td>{{data.productRatings}}</td>
       <td>{{data.productDiscount}}</td>
+      <td routerLink="../product/{{data.productId}}">Edit</td>
       <td>
         <a nz-popconfirm
            nzPopconfirmTitle="Are you sure delete this task?"
