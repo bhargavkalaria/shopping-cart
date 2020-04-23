@@ -1,0 +1,32 @@
+<ng-container  *ngIf="!isLoading">
+  <nz-table #basicTable [nzData]="listOfData">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Rating</th>
+      <th>Discount</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of listOfData;let i = index">
+      <td>{{data.productName}}</td>
+      <td>{{data.productPrice}}</td>
+      <td><img src="{{data.productImage}}" class="table-image"></td>
+      <td>{{data.productRatings}}</td>
+      <td>{{data.productDiscount}}</td>
+      <td>
+        <a nz-popconfirm
+           nzPopconfirmTitle="Are you sure delete this task?"
+           nzPopconfirmPlacement="bottom"
+           (nzOnConfirm)="deleteProduct(data,i)">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </nz-table>
+</ng-container>
+<div class="loader" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

@@ -1,0 +1,54 @@
+@import "../../../../theme";
+
+.product {
+  padding-top: 50px;
+
+  .product-details {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .add-to-cart {
+    padding-top: 30px;
+  }
+
+  .product-rating {
+    margin: 5px 0;
+    display: flex;
+    border-radius: 6px;
+    color: @white;
+    padding: 5px 10px;
+    width: 60px;
+    align-items: center;
+    background-color: @primary-color;
+  }
+
+  .product-rating > i {
+    margin-left: 5px;
+  }
+
+  .product-discount {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+
+    .product-price {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .product-original-price {
+      text-decoration: line-through;
+      font-weight: bold;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+
+    .product-discount {
+      font-size: 16px;
+      margin-left: 20px;
+      color: forestgreen;
+      font-weight: bold;
+    }
+  }
+}

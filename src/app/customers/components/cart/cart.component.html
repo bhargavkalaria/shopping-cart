@@ -1,0 +1,19 @@
+<ng-container *ngIf="!isLoading">
+  <ul nz-list nzBordered nzSize="large" *ngIf="cartProduct.length>0">
+    <ng-container *ngFor="let data of cartProduct;let i = index">
+      <li nz-list-item nzNoFlex>{{data.productName}}
+        <a nz-popconfirm
+           nzPopconfirmTitle="Do you want to remove {{data.productName}} from the cart?"
+           nzPopconfirmPlacement="bottom"
+           (nzOnConfirm)="removeFromCart(data,i)"
+           class="product-list-right">Remove
+          from cart</a></li>
+    </ng-container>
+  </ul>
+  <div class="product-order" *ngIf="cartProduct.length>0">
+    <button nz-button nzType="primary" nzGhost (click)="placeOrder()">Place order</button>
+  </div>
+</ng-container>
+<div class="loader" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

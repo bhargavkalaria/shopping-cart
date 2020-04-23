@@ -1,0 +1,10 @@
+<ng-container *ngIf="!isLoading">
+  <nz-row [nzGutter]="16">
+    <nz-col [nzSpan]="24">
+      <nz-statistic [nzValue]="orderNumber | number" [nzTitle]="'Order placed till date'"></nz-statistic>
+    </nz-col>
+  </nz-row>
+</ng-container>
+<div class="loader" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

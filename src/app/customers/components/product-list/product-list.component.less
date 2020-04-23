@@ -1,0 +1,60 @@
+@import "../../../../theme";
+
+.product-list {
+  border-radius: 8px 10px 8px 20px;
+  box-shadow: 0 0 10px 0 #ecedf1;
+  padding: 20px 0;
+  margin: 10px;
+  cursor: pointer;
+
+  .product-images {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .product-title {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .product-rating {
+    margin: 5px 0;
+    display: flex;
+    border-radius: 6px;
+    color: @white;
+    padding: 5px 10px;
+    width: 60px;
+    align-items: center;
+    background-color: @primary-color;
+  }
+
+  .product-rating > i {
+    margin-left: 5px;
+  }
+
+  .product-discount {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+
+    .product-price {
+      font-weight: bold;
+    }
+
+    .product-original-price {
+      text-decoration: line-through;
+      font-weight: bold;
+    }
+
+    .product-discount {
+      color: forestgreen;
+      font-weight: bold;
+    }
+  }
+}
+
+.product-list:hover {
+  box-shadow: 0 20px 15px 0 #ecedf1;
+}

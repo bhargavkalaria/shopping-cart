@@ -1,0 +1,34 @@
+<ng-container *ngIf="!isLoading">
+  <div *ngIf="productList.length>0">
+    <div nz-row nzGutter="32" nzType="flex" nzJustify="center">
+      <ng-container *ngFor="let productData of productList">
+        <div nz-col nzXs="24" nzSm="24" nzMd="24" routerLink="../product-list/{{productData.productId}}" nzLg="10"
+             nzXl="10"
+             nzXXl="10" *ngIf="!productData.addedToCart" class="product-list">
+          <div>
+            <img src="{{productData.productImage}}" class="product-images">
+          </div>
+          <div class="product-title">{{productData.productName}}</div>
+          <div class="product-rating">
+            {{productData.productRatings}}
+            <i nz-icon nzType="star" nzTheme="outline"></i>
+          </div>
+          <div class="product-discount">
+            <div class="product-price">
+              {{(productData.productPrice - ((productData.productPrice * productData.productDiscount) / 100)) | currency:"₹"}}
+            </div>
+            <div class="product-original-price">
+              {{productData.productPrice| currency:"₹"}}
+            </div>
+            <div class="product-discount">
+              {{productData.productDiscount + '% off'}}
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>
+<div class="loader" *ngIf="isLoading">
+  <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
+</div>

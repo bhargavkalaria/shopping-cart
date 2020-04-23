@@ -1,0 +1,37 @@
+<form nz-form [formGroup]="productForm" (ngSubmit)="addProduct()">
+  <nz-form-item>
+    <nz-form-control [nzXs]="10" nzErrorTip="Product name is not valid!">
+      <input nz-input formControlName="productName" placeholder="Product name"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="10" nzErrorTip="Product price is not valid!">
+      <input nz-input type="number" formControlName="productPrice" placeholder="Product price"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="10" nzErrorTip="Url is invalid!">
+      <input nz-input type="url" formControlName="productImage" placeholder="Product image"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="10" nzErrorTip="Product rating is not valid!">
+      <input nz-input type="number" formControlName="productRatings" placeholder="Product rating"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="10" nzErrorTip="Product discount is not valid!">
+      <input nz-input type="number" formControlName="productDiscount" placeholder="Product discount"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="10" nzErrorTip="Product description is not valid!">
+      <input nz-input formControlName="productDescription" placeholder="Product description"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item nz-row class="register-area">
+    <nz-form-control [nzSpan]="14">
+      <button nz-button nzType="primary" [disabled]="productForm.invalid">Add Product</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
